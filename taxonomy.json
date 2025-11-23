@@ -1,0 +1,7 @@
+{
+  "Food & Dining": ["starbucks", "zomato", "swiggy"],
+  "Shopping": ["amazon", "flipkart", "myntra"],
+  "Fuel": ["shell", "indian oil", "hp petrol"],
+  "Groceries": ["bigbasket", "dmart"],
+  "Utilities": ["google *", "netflix", "spotify"]
+}
