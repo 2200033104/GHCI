@@ -40,4 +40,41 @@ A scalable, transparent, and fully in-house ML system that classifies financial 
 ---
 
 ## 🏗️ System Architecture
+User Input
+↓
+Preprocessing → Vectorization → ML Model
+↓
+Categorisation Engine → Confidence Score
+↓
+Explainability (SHAP)
+↓
+Storage + Feedback → Retraining
+
+---
+
+## 🗄️ Data Model
+
+### **transactions**
+| column | type | description |
+|--------|------|-------------|
+| id | UUID | primary key |
+| raw_text | text | original transaction |
+| processed_text | text | cleaned NLP text |
+| predicted_category | text | model output |
+| confidence | float | probability score |
+| created_at | datetime | timestamp |
+
+### **feedback**
+Stores user corrections.
+
+### **taxonomy.json**
+Defines all categories:
+
+```json
+{
+  "Food & Dining": ["starbucks", "zomato"],
+  "Shopping": ["amazon", "flipkart"],
+  "Fuel": ["shell", "indian oil"]
+}
+
 
